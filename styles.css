@@ -1,0 +1,157 @@
+.card {
+    max-width: 600px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, rgba(0,110,255,0.8), rgba(0,60,180,0.9));
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.avatar-container{ 
+    margin-bottom: 20px;
+
+}
+
+.avatar{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.description{
+    margin-bottom: 15px;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact{
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.links a {
+    margin-bottom:0 15px;
+    text-decoration: none;
+    color:rgb(255, 255, 255) ;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.links a:hover {
+    background-color: rgb(39, 82, 221); 
+    transform: translateX(10px);
+}
+
+
+.link-card{
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    background:rgba(57, 87, 255, 0.336);
+    color: white;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.contact a{
+    margin-bottom:0 15px;
+    text-decoration: none;
+    color:rgb(255, 255, 255) ;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card h2{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.card ul{
+    text-align: left;
+    margin-top: 10px;
+    color: white;
+}
+
+.card li{
+    margin-bottom: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card p{
+    font-size: 14px;
+}
+
+.card2 p{
+    font-size: 14px;
+}
+
+.card2 li {
+    margin-bottom: 8px;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.card3 p{
+    font-size: 14px;
+}
+
+.card3 li {
+    margin-bottom: 8px;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+textarea.text {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+
+textarea.text::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+
+.hablemos{
+    width: 550px;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    border-color: 2px solid #0004f1;
+}
+
+.link-proyectos{
+    margin-bottom: 0 15px;
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+  
