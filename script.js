@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (typewriter) {
             const roles = [
                 'Desarrollador de Software',
-                'Full Stack | React | Node.js',
+                'Front-end | Full Stack | React | Node.js',
                 'Apasionado por la innovación',
                 '¡Listo para nuevos retos!'
             ];
@@ -180,8 +180,8 @@ document.addEventListener("DOMContentLoaded", function () {
         update();
     }
     animateCounter('exp-count', 4, 900); // Años de experiencia
-    animateCounter('proj-count', 15, 1200); // Proyectos
-    animateCounter('tech-count', 10, 1000); // Tecnologías
+    animateCounter('proj-count', 2, 1200); // Proyectos
+    animateCounter('tech-count', 3, 1000); // Tecnologías
 
     // Frases motivacionales aleatorias
     const frases = [
