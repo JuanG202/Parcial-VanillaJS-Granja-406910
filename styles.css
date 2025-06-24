@@ -1,157 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 .card {
-    max-width: 600px;
-    margin: 40px auto;
-    background: linear-gradient(135deg, rgba(0,110,255,0.8), rgba(0,60,180,0.9));
-    padding: 30px;
-    border-radius: 15px;
+    max-width: 700px;
+    background: #1e1e1e; /* Darker card background */
+    padding: 40px;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
 }
 
-.avatar-container{ 
-    margin-bottom: 20px;
-
+.avatar-container {
+    margin-bottom: 30px;
 }
 
-.avatar{
-    width: 160px;
-    height: 160px;
+.avatar {
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
+    border: 5px solid #0d6efd; /* A nice blue accent */
 }
 
-.description{
-    margin-bottom: 15px;
-    color: white;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.title h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #0d6efd; /* Blue accent for the name */
 }
 
-.contact{
-    margin-bottom: 15px;
-    font-weight: bold;
-    color: white;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.title h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #a0a0a0; /* Lighter text for the title */
 }
 
-.links a {
-    margin-bottom:0 15px;
+.description {
+    margin-bottom: 25px;
+}
+
+.description h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.contact p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.contact a {
+    color: #0d6efd;
     text-decoration: none;
-    color:rgb(255, 255, 255) ;
-    font-weight: bold;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.links a:hover {
-    background-color: rgb(39, 82, 221); 
-    transform: translateX(10px);
+.contact a:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
+.links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-.link-card{
+.link-card {
     display: inline-block;
-    margin: 15px;
-    padding: 10px 20px;
-    background:rgba(57, 87, 255, 0.336);
+    padding: 12px 25px;
+    background: #0d6efd;
     color: white;
-    border-radius: 15px;
+    border-radius: 10px;
     text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.contact a{
-    margin-bottom:0 15px;
-    text-decoration: none;
-    color:rgb(255, 255, 255) ;
-    font-weight: bold;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.link-card:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
 }
 
-.card h2{
-    color: white;
-    font-weight: bold;
-    font-size: 25px;
+#download {
+    background: #28a745; /* Green for download button */
 }
 
-.card ul{
+#download:hover {
+    background: #218838;
+}
+
+/* Styles for other pages */
+.card h2 {
+    color: #0d6efd;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.card ul {
     text-align: left;
-    margin-top: 10px;
-    color: white;
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
 }
 
-.card li{
-    margin-bottom: 8px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
+.card li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-.card p{
-    font-size: 14px;
+.card p {
+    font-size: 1rem;
+    color: #cccccc;
 }
 
-.card2 p{
-    font-size: 14px;
-}
-
-.card2 li {
-    margin-bottom: 8px;
-    color: white;
-    font-size: 20px;
-    font-weight: normal;
-}
-
-.card3 p{
-    font-size: 14px;
-}
-
-.card3 li {
-    margin-bottom: 8px;
-    color: white;
-    font-size: 20px;
-    font-weight: normal;
-}
-
-textarea.text {
+.textarea.text {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    color: #333;
+    padding: 15px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #2a2a2a;
+    color: #ffffff;
     transition: all 0.3s ease;
-  }
+    box-sizing: border-box;
+}
 
 textarea.text::placeholder {
-    color: #999;
-    font-style: italic;
-  }
-
-.hablemos{
-    width: 450px;
-    height: 300px;
-    border-radius: 20px;
-    object-fit: cover;
-    border-color: 2px solid #0004f1;
+    color: #888;
 }
 
-.link-proyectos{
-    margin-bottom: 0 15px;
+.hablemos {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid #0d6efd;
+    margin-top: 20px;
+}
+
+.link-proyectos {
     text-decoration: underline;
-    color: rgb(255, 255, 255);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0d6efd;
+    font-weight: 500;
 }
 
+.link-proyectos:hover {
+    color: #ffffff;
+}
 
+/* Styles for Projects Page */
+.project-card {
+    background: #2a2a2a;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: left;
+    border-left: 5px solid #0d6efd;
+    transition: transform 0.3s ease;
+}
 
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #0d6efd;
+}
+
+.project-card .technologies {
+    margin-top: 15px;
+}
+
+.project-card .technologies span {
+    background-color: #0d6efd;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.project-links a {
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+/* Styles for Skills Page */
+.skills-category {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.skills-category h3 {
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-list li {
+    background-color: #2a2a2a;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
   

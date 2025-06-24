@@ -1,51 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV de Juan Garcia - Desarrollador de Software</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script src="./script.js"></script>
-    <title>Mi CV</title>
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    <section>
-        <div class="card">
+    <section class="card">
         <div class="avatar-container">
-            <div>
-                <img 
+            <img 
                 src="./assets/perfil.jpg"
-                alt="avatar"
-                id= "avatarPreview"
+                alt="Foto de perfil de Juan Garcia"
+                id="avatarPreview"
                 class="avatar"  
-                />
-
-            <div class="description">
-                <h2>Descripcion del CV</h2>
-                <p> Tecnologo en desarrollo de software, Mi formación académica y experiencia práctica me preparan para enfrentar desafíos en el desarrollo y mantenimiento de sistemas informáticos, buscando siempre mejorar la eficiencia y seguridad de las plataformas tecnológicas.  
-                </p>
-            </div>
-
-            <div class="contact">
-                <p>📞 Contacto: 3046640221 <br>
-                📧 Correo: 4684593@gmail.com <br>
-                <a href="https://github.com/JuanG202" target="_blank">📝Cuenta de GitHub</a> <br>
-                </p>
-            </div>
-
-            <div class="links">
-                <a href="./education.html" class="link-card"> Educacion</a>
-                <a href="./experience.html" class="link-card"> Experiencia</a>
-                <a href="./hablemos.html" class="link-card"> Hablemos</a>
-            </div>
-
-            <button id="download" class="link-card" style="font-weight: bold;">
-                Descargar CV</button>
-
-
-
+            />
         </div>
+
+        <div class="title">
+            <h1>Juan Pablo Granja</h1>
+            <h2>Desarrollador de Software</h2>
         </div>
+
+        <div class="description">
+            <h2>Acerca de Mí</h2>
+            <p>
+                Tecnólogo en desarrollo de software apasionado por crear soluciones eficientes y escalables. 
+                Tengo experiencia en JavaScript, React, Node.js, Python, SQL, MongoDB, etc.
+                Me especializo en desarrollo front-end, back-end, aplicaciones móviles, etc. 
+                Siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades para enfrentar desafíos complejos y 
+                contribuir al éxito de proyectos innovadores.
+            </p>
+        </div>
+
+        <div class="contact">
+            <p>
+                📞 <a href="tel:+573046640221">3046640221</a> |
+                📧 <a href="mailto:4684593@gmail.com">4684593@gmail.com</a> |
+                📝 <a href="https://github.com/JuanG202" target="_blank">GitHub</a>
+            </p>
+        </div>
+
+        <div class="links">
+            <a href="./education.html" class="link-card">Educación</a>
+            <a href="./experience.html" class="link-card">Experiencia</a>
+            <a href="./proyectos.html" class="link-card">Proyectos</a>
+            <a href="./habilidades.html" class="link-card">Habilidades</a>
+            <a href="./hablemos.html" class="link-card">Hablemos</a>
+        </div>
+
+        <button id="download" class="link-card">Descargar CV</button>
     </section>
 </body>
 </html>

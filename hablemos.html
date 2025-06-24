@@ -3,63 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hablemos - Juan Garcia</title>
     <link rel="stylesheet" href="./styles.css">
-    <title>Hablemos</title>
 </head>
 <body>
-    <div class="card">
-        <div class="avatar-container">
-            <section id="hablemos">
-                <h2>HABLEMOS</h2>
-                <p>Si quieres hablar conmigo, puedes escribirme que te parecio mi CV</p>
-                <form id="contact-form">
-                    <textarea name="message" id="message" rows="5" placeholder="Escribe tu mensaje aquí..." class="text" required></textarea>
-                    <p><button type="submit" class="link-card">Enviar</button></p>
-                        <div>
-                        <img 
-                        src="./assets/hablemos.jpg"
-                        alt="hablemos"
-                        id= "hablemosPreview"
-                        class="hablemos"  
-                        />
-                </form>
-                <p id="status-message"></p>
-                <a href="./index.html" class="link-card">Volver a portafolio</a>
-            </section>
+    <section class="card">
+        <h2>Hablemos</h2>
+        <p>Si te ha gustado mi perfil y quieres contactarme, déjame un mensaje.</p>
+        
+        <form id="contact-form">
+            <textarea name="message" id="message" rows="6" placeholder="Escribe tu mensaje aquí..." class="textarea text" required></textarea>
+            <button type="submit" class="link-card">Enviar Mensaje</button>
+        </form>
+        
+        <p id="status-message"></p>
+        
+        <img 
+            src="./assets/hablemos.jpg"
+            alt="Ilustración de contacto"
+            class="hablemos"  
+        />
+
+        <div>
+            <a href="./index.html" class="link-card" style="margin-top: 20px;">Volver al Inicio</a>
         </div>
-    </div>
+    </section>
 
-    <!-- SDK de EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
     <script>
-        // Inicializa EmailJS con tu PUBLIC KEY
-        emailjs.init('XAfClw-7x_KP8Y2qO'); // <-- reemplaza esto con tu clave pública
+        emailjs.init('XAfClw-7x_KP8Y2qO'); // Reemplaza con tu Public Key de EmailJS
 
-        // Manejo del envío del formulario
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            // Obtiene el mensaje del formulario
             const message = document.getElementById('message').value;
+            const statusMessage = document.getElementById('status-message');
 
-            // Parámetros para enviar a EmailJS
+            if (message.trim() === '') {
+                statusMessage.textContent = 'Por favor, escribe un mensaje.';
+                return;
+            }
+
             const templateParams = {
                 message: message,
             };
 
-            // Envia el mensaje a través de EmailJS
+            statusMessage.textContent = 'Enviando...';
+
             emailjs.send('service_v5r24vf', 'template_nkffus8', templateParams)
                 .then(function(response) {
-                    document.getElementById('status-message').textContent = 'Mensaje enviado correctamente.';
+                    statusMessage.textContent = '¡Mensaje enviado con éxito!';
                     document.getElementById('contact-form').reset();
                 }, function(error) {
-                    document.getElementById('status-message').textContent = 'Error al enviar el mensaje.';
+                    statusMessage.textContent = 'Error al enviar el mensaje. Inténtalo de nuevo.';
                 });
         });
     </script>
-
-    
-
 </body>
 </html>
