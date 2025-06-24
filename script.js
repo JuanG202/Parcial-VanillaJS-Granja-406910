@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Descargar PDF (solo la card, fondo blanco, texto oscuro, sin decoraciones)
+    // Descargar PDF (solo la card, visualización profesional y clara)
     const downloadBtn = document.getElementById("download");
     if (downloadBtn) {
         downloadBtn.addEventListener("click", function () {
@@ -15,17 +15,67 @@ document.addEventListener("DOMContentLoaded", function () {
             // Quitar fondo SVG si existe
             const bg = clone.querySelector(".background-svg");
             if (bg) bg.remove();
-            // Aplicar estilos para PDF
+            // Aplicar estilos claros y profesionales para PDF
             clone.style.background = "#fff";
             clone.style.color = "#222";
             clone.style.boxShadow = "none";
-            clone.style.border = "1px solid #ccc";
-            clone.style.maxWidth = "700px";
+            clone.style.border = "1.5px solid #0d6efd22";
+            clone.style.maxWidth = "800px";
             clone.style.margin = "40px auto";
             clone.style.fontFamily = "Poppins, Arial, sans-serif";
-            // Cambiar color de títulos y enlaces
-            clone.querySelectorAll('h1,h2,h3,h4,h5').forEach(e=>e.style.color='#0d6efd');
-            clone.querySelectorAll('a').forEach(e=>{e.style.color='#0d6efd';e.style.textDecoration='underline'});
+            clone.style.borderRadius = "18px";
+            clone.style.padding = "40px 40px 30px 40px";
+            clone.style.textAlign = "center";
+            // Mejorar la imagen de perfil
+            const avatar = clone.querySelector('.avatar');
+            if (avatar) {
+                avatar.style.width = '200px';
+                avatar.style.height = '200px';
+                avatar.style.border = '8px solid #0d6efd';
+                avatar.style.margin = '30px auto 30px auto';
+                avatar.style.display = 'block';
+                avatar.style.boxShadow = 'none';
+            }
+            // Títulos y enlaces en azul
+            clone.querySelectorAll('h1,h2,h3,h4,h5').forEach(e=>{
+                e.style.color='#0d6efd';
+                e.style.fontWeight='700';
+            });
+            clone.querySelectorAll('a').forEach(e=>{
+                e.style.color='#0d6efd';
+                e.style.textDecoration='underline';
+                e.style.fontWeight='500';
+            });
+            // Mejorar bloques de gamificación y contadores
+            clone.querySelectorAll('.counter').forEach(e=>{
+                e.style.background='#f7f7f7';
+                e.style.color='#222';
+                e.style.borderRadius='12px';
+                e.style.display='inline-block';
+                e.style.margin='0 18px';
+                e.style.padding='18px 0';
+                e.style.minWidth='120px';
+                e.style.fontSize='1.1rem';
+            });
+            // Mejorar project-card y skills-category
+            clone.querySelectorAll('.project-card, .skills-category').forEach(e=>{
+                e.style.background='#f7f7f7';
+                e.style.borderLeft='5px solid #0d6efd';
+                e.style.boxShadow='none';
+                e.style.margin='30px 0';
+                e.style.padding='20px 30px';
+                e.style.borderRadius='12px';
+                e.style.textAlign='left';
+            });
+            // Mejorar imagen de contacto
+            const hablemosImg = clone.querySelector('.hablemos');
+            if (hablemosImg) {
+                hablemosImg.style.border = '2px solid #0d6efd';
+                hablemosImg.style.background = '#fff';
+                hablemosImg.style.display = 'block';
+                hablemosImg.style.margin = '30px auto 20px auto';
+                hablemosImg.style.maxWidth = '350px';
+            }
             // Eliminar animaciones
             clone.querySelectorAll('[style*="animation"], [class*="glow"], [class*="impact-avatar"]').forEach(e=>{e.style.animation='none'});
             // Crear contenedor temporal
@@ -53,54 +103,63 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Saludo animado
-    const greeting = document.getElementById('greeting');
-    if (greeting) {
-        let saludo = '¡Hola 👋, soy Juan Pablo Granja!';
-        let i = 0;
-        greeting.textContent = '';
-        function typeSaludo() {
-            if (i < saludo.length) {
-                greeting.textContent += saludo.charAt(i);
-                i++;
-                setTimeout(typeSaludo, 45);
-            }
-        }
-        typeSaludo();
-    }
-
-    // Máquina de escribir para subtítulo
-    const typewriter = document.getElementById('typewriter');
-    if (typewriter) {
-        const roles = [
-            'Desarrollador de Software',
-            'Full Stack | React | Node.js',
-            'Apasionado por la innovación',
-            '¡Listo para nuevos retos!'
-        ];
-        let roleIndex = 0, charIndex = 0, isDeleting = false;
-        function typeRole() {
-            let current = roles[roleIndex];
-            if (isDeleting) {
-                typewriter.textContent = current.substring(0, charIndex--);
-                if (charIndex < 0) {
-                    isDeleting = false;
-                    roleIndex = (roleIndex + 1) % roles.length;
-                    setTimeout(typeRole, 600);
-                } else {
-                    setTimeout(typeRole, 30);
-                }
-            } else {
-                typewriter.textContent = current.substring(0, charIndex++);
-                if (charIndex > current.length) {
-                    isDeleting = true;
-                    setTimeout(typeRole, 1200);
-                } else {
-                    setTimeout(typeRole, 70);
+    // Solo mostrar saludo animado y subtítulo en index.html
+    const isIndex = /index\.html$|\/index\.html$|\/index$|\/cv$|\/cv\/$|\/$/i.test(window.location.pathname);
+    if (isIndex) {
+        // Saludo animado
+        const greeting = document.getElementById('greeting');
+        if (greeting) {
+            let saludo = '¡Hola 👋, soy Juan Pablo Granja!';
+            let i = 0;
+            greeting.textContent = '';
+            function typeSaludo() {
+                if (i < saludo.length) {
+                    greeting.textContent += saludo.charAt(i);
+                    i++;
+                    setTimeout(typeSaludo, 45);
                 }
             }
+            typeSaludo();
         }
-        typeRole();
+        // Máquina de escribir para subtítulo
+        const typewriter = document.getElementById('typewriter');
+        if (typewriter) {
+            const roles = [
+                'Desarrollador de Software',
+                'Full Stack | React | Node.js',
+                'Apasionado por la innovación',
+                '¡Listo para nuevos retos!'
+            ];
+            let roleIndex = 0, charIndex = 0, isDeleting = false;
+            function typeRole() {
+                let current = roles[roleIndex];
+                if (isDeleting) {
+                    typewriter.textContent = current.substring(0, charIndex--);
+                    if (charIndex < 0) {
+                        isDeleting = false;
+                        roleIndex = (roleIndex + 1) % roles.length;
+                        setTimeout(typeRole, 600);
+                    } else {
+                        setTimeout(typeRole, 30);
+                    }
+                } else {
+                    typewriter.textContent = current.substring(0, charIndex++);
+                    if (charIndex > current.length) {
+                        isDeleting = true;
+                        setTimeout(typeRole, 1200);
+                    } else {
+                        setTimeout(typeRole, 70);
+                    }
+                }
+            }
+            typeRole();
+        }
+    } else {
+        // Ocultar saludo y subtítulo en otras páginas
+        const greeting = document.getElementById('greeting');
+        if (greeting) greeting.style.display = 'none';
+        const typewriter = document.getElementById('typewriter');
+        if (typewriter) typewriter.style.display = 'none';
     }
 
     // Contadores animados
