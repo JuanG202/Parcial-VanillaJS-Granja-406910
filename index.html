@@ -9,8 +9,14 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
+    <!-- Fondo SVG animado -->
+    <div class="background-svg">
+        <svg viewBox="0 0 1440 320"><path fill="#0d6efd" fill-opacity="0.2" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
     <section class="card">
-        <div class="avatar-container">
+        <button id="theme-toggle" title="Cambiar modo claro/oscuro">🌙</button>
+        <div class="avatar-container impact-avatar">
+            <div class="avatar-glow"></div>
             <img 
                 src="./assets/perfil.jpg"
                 alt="Foto de perfil de Juan Garcia"
@@ -18,12 +24,29 @@
                 class="avatar"  
             />
         </div>
-
         <div class="title">
-            <h1>Juan Pablo Granja</h1>
-            <h2>Desarrollador de Software</h2>
+            <h1 id="greeting"></h1>
+            <h2 id="typewriter"></h2>
         </div>
-
+        <div class="gamification">
+            <div class="counter">
+                <span id="exp-count">0</span>
+                <p>Años de experiencia</p>
+            </div>
+            <div class="counter">
+                <span id="proj-count">0</span>
+                <p>Proyectos</p>
+            </div>
+            <div class="counter">
+                <span id="tech-count">0</span>
+                <p>Tecnologías</p>
+            </div>
+            <div class="medals">
+                <span title="Full Stack"><img src="https://img.icons8.com/color/48/000000/medal2--v2.png" alt="Medalla Full Stack"/></span>
+                <span title="React Pro"><img src="https://img.icons8.com/color/48/000000/react-native.png" alt="Medalla React"/></span>
+                <span title="Node.js Ninja"><img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Medalla Node.js"/></span>
+            </div>
+        </div>
         <div class="description">
             <h2>Acerca de Mí</h2>
             <p>
@@ -34,7 +57,6 @@
                 contribuir al éxito de proyectos innovadores.
             </p>
         </div>
-
         <div class="contact">
             <p>
                 📞 <a href="tel:+573046640221">3046640221</a> |
@@ -42,7 +64,6 @@
                 📝 <a href="https://github.com/JuanG202" target="_blank">GitHub</a>
             </p>
         </div>
-
         <div class="links">
             <a href="./education.html" class="link-card">Educación</a>
             <a href="./experience.html" class="link-card">Experiencia</a>
@@ -50,7 +71,7 @@
             <a href="./habilidades.html" class="link-card">Habilidades</a>
             <a href="./hablemos.html" class="link-card">Hablemos</a>
         </div>
-
+        <div class="motivational" id="motivational"></div>
         <button id="download" class="link-card">Descargar CV</button>
     </section>
 </body>
